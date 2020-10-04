@@ -1,6 +1,27 @@
-<div class="text-uppercase p-3">
-  <h1 class="text-center">{{ title }}</h1>
-  <h2>name : {{ person.name }}</h2>
-  <h2>email : {{ person.email }}</h2>
-  <h2>phone : {{ person.phone }}</h2>
+<div class="container-fluid">
+  <div class="container">
+    <div class="text-center">
+      <button
+        class="btn btn-outline-primary m-3"
+        routerLink="{{ routes.home }}"
+      >
+        home
+      </button>
+      <button
+        class="btn btn-outline-primary m-3"
+        routerLink="{{ routes.about }}"
+      >
+        about
+      </button>
+      <button
+        class="btn btn-outline-primary m-3"
+        routerLink="{{ routes.education }}"
+      >
+        education
+      </button>
+    </div>
+    <div class="row">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
