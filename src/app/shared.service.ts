@@ -1,24 +1,14 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { MediaChange, MediaObserver } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
-import { routes } from './consts/routes.enum';
-import { Person } from './person';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+@Injectable({
+  providedIn: 'root',
 })
-export class AppComponent implements OnInit, OnDestroy {
-  public routes: typeof routes = routes;
+export class SharedService {
   mediaSub: Subscription;
   deviceXs: boolean;
-  title = 'my-portfolio';
-  person: Person = {
-    name: 'abderrahmane',
-    email: 'abodaitwihi@gmail.com',
-    phone: '0651080175',
-  };
+
   constructor(public mediaObserver: MediaObserver) {}
   ngOnInit() {
     this.mediaSub = this.mediaObserver.media$.subscribe(
@@ -26,6 +16,13 @@ export class AppComponent implements OnInit, OnDestroy {
         console.log(result.mqAlias);
         this.deviceXs = result.mqAlias == 'xs' ? true : false;
         console.log(this.deviceXs);
+      }
+    );
+  }
+  getDeviceXs() {
+    this.mediaSub = this.mediaObserver.media$.subscribe(
+      (result: MediaChange) => {
+        return result.mqAlias == 'xs' ? true : false;
       }
     );
   }

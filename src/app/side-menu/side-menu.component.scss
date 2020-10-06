@@ -1,0 +1,9 @@
+mat-list-item {
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+.active {
+  color: pink;
+}
