@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { routes } from '../consts/routes.enum';
 
 @Component({
@@ -8,10 +8,10 @@ import { routes } from '../consts/routes.enum';
 })
 export class SideMenuComponent implements OnInit {
   public routes: typeof routes = routes;
-  item1 = routes[0];
-  items = ['home', 'about', 'education'];
-
+  @Output() hideSideMenu = new EventEmitter();
   constructor() {}
-
+  hideIt() {
+    this.hideSideMenu.emit();
+  }
   ngOnInit(): void {}
 }

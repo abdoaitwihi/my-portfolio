@@ -12,6 +12,13 @@ import { LayoutComponent } from './layout/layout.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { NavComponent } from './nav/nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -22,6 +29,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     LayoutComponent,
     SideMenuComponent,
     TopBarComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +37,12 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
