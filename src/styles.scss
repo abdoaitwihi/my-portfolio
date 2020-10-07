@@ -12,3 +12,9 @@ body {
 .mat-tab-nav-bar.mat-primary .mat-ink-bar {
   background: red;
 }
+.clean-a {
+  color: inherit;
+  &:hover {
+    color: inherit;
+  }
+}
