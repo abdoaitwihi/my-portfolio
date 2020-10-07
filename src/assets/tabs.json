@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "home",
+    "name": "home",
+    "content": "<app-education></app-education>"
+  },
+  {
+    "icon": "call",
+    "name": "about",
+    "content": "content about"
+  },
+  {
+    "icon": "favorite",
+    "name": "favorite",
+    "content": "content one"
+  }
+]

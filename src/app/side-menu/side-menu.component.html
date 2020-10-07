@@ -1,17 +1,20 @@
 <mat-list>
   <div>
+    <mat-divider></mat-divider>
     <mat-list-item
       (click)="hideIt()"
       routerLink="/{{ routes.home }}"
       routerLinkActive="active"
       >Home
     </mat-list-item>
+    <mat-divider></mat-divider>
     <mat-list-item
       (click)="hideIt()"
       routerLink="/{{ routes.about }}"
       routerLinkActive="active"
       >About
     </mat-list-item>
+    <mat-divider></mat-divider>
     <mat-list-item
       (click)="hideIt()"
       routerLink="/{{ routes.education }}"

@@ -1,23 +1,21 @@
-<mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
-  <mat-tab>
+<mat-tab-group
+  dynamicHeight
+  class="h-100"
+  mat-stretch-tabs
+  class="example-stretched-tabs mat-elevation-z4"
+>
+  <mat-tab class="h-100" *ngFor="let tab of homeTabs">
     <ng-template mat-tab-label>
-      <mat-icon class="example-tab-icon">thumb_up</mat-icon>
-      First
+      <mat-icon class="example-tab-icon">{{ tab.icon }}</mat-icon>
+      {{ tab.name }}
     </ng-template>
-    Content 1
-  </mat-tab>
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon class="example-tab-icon">favorite</mat-icon>
-      Second
-    </ng-template>
-    Content 2
-  </mat-tab>
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon class="example-tab-icon">thumb_up</mat-icon>
-      Third
-    </ng-template>
-    Content 3
+    <div class="h-100 p-2 p-lg-4" [ngSwitch]="tab.name">
+      <!-- the same view can be shown in more than one case -->
+      <app-education *ngSwitchCase="'home'">home works</app-education>
+      <app-about *ngSwitchCase="'about'">about works</app-about>
+      <div *ngSwitchCase="'favorite'">this is favorite</div>
+      <!--default case when there are no matches -->
+      <div *ngSwitchDefault>this is the default resualt {{ tab.name }}</div>
+    </div>
   </mat-tab>
 </mat-tab-group>
