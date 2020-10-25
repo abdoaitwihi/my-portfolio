@@ -1,23 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
-
 html,
 body {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
 .mat-tab-group.mat-primary .mat-ink-bar,
 .mat-tab-nav-bar.mat-primary .mat-ink-bar {
   background: red;
 }
+
 .clean-a {
   color: inherit;
-  &:hover {
-    color: inherit;
-  }
 }
+
+.clean-a:hover {
+  color: inherit;
+}
+
 :root {
   /* headings */
   --h1-home: 70px;
@@ -166,11 +170,11 @@ nav ul .nav-link {
   border-bottom: solid 4px transparent;
   cursor: pointer;
 }
-nav ul li {
-  &:focus {
-    outline: none;
-  }
+
+nav ul li:focus {
+  outline: none;
 }
+
 nav ul .nav-link:hover,
 nav ul .active a,
 .active nav ul a {
@@ -178,13 +182,7 @@ nav ul .active a,
 }
 
 header {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#1f0a1270),
-    to(#1f0a12)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, from(#1f0a1270), to(#1f0a12));
   background: linear-gradient(#1f0a1270, #1f0a12);
 }
 
@@ -224,13 +222,7 @@ header h3 {
 }
 
 .bg-1 {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#1f0a12),
-    to(#1f0a1270)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, from(#1f0a12), to(#1f0a1270));
   background: linear-gradient(#1f0a12, #1f0a1270);
 }
 
@@ -247,4 +239,4 @@ header h3 {
 h2 {
   font-size: var(--h2-size);
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */

@@ -20,6 +20,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { httpInterceptorProviders } from './http-interceptors';
+import { TabsService } from './tabs.service';
+import { Interceptor } from './http-interceptors/interceptor';
 
 @NgModule({
   declarations: [
@@ -31,6 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     SideMenuComponent,
     TopBarComponent,
     NavComponent,
+    HeaderComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +53,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [TabsService, httpInterceptorProviders],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

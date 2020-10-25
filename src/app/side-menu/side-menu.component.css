@@ -1,0 +1,12 @@
+mat-list-item {
+  cursor: pointer;
+}
+
+mat-list-item:focus {
+  outline: none;
+}
+
+.active {
+  color: pink;
+}
+/*# sourceMappingURL=side-menu.component.css.map */

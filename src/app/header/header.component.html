@@ -1,0 +1,86 @@
+<header class="container-fluid p-0">
+  <div class="container-fluid p-0 header">
+    <div class="container p-0">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- Brand -->
+
+        <a class="navbar-brand" href="#">Navbar</a>
+        <div class="ml-auto"></div>
+
+        <!-- Toggler/collapsibe Button -->
+        <div class="dropdown languge-button">
+          <button
+            type="button"
+            class="btn dropdown-toggle"
+            data-toggle="dropdown"
+          >
+            FR
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="home">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          (click)="showNav()"
+          data-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div
+          class="navbar-collapse"
+          [class.collapse]="isCollapsed"
+          id="collapsibleNavbar"
+        >
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item" routerLink="home" routerLinkActive="active">
+              <a class="nav-link">Accueil</a>
+            </li>
+            <li
+              class="nav-item"
+              routerLink="education"
+              routerLinkActive="active"
+            >
+              <a class="nav-link">Découvrir</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Activités </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">December project </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Join us </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact us </a>
+            </li>
+            <li class="nav-item d-lg-none d-xl-block">
+              <a class="nav-link" href="#">Conditions générales </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="banner container">
+    <div class="row h-100 my-auto">
+      <div class="col-12 mx-auto my-auto text-center h-100">
+        <div class="my-auto h-100 row">
+          <div class="my-auto col">
+            <h1>A TASTE OF MOROCCO</h1>
+            <h3>Enable international students to discover Morocco</h3>
+            <div class="p-5"></div>
+
+            <button class="btn-home py-3 px-5">December project</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

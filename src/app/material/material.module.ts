@@ -8,6 +8,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 
 const materials = [
   MatAutocompleteModule,
@@ -18,6 +20,7 @@ const materials = [
   MatButtonModule,
   MatDividerModule,
   MatListModule,
+  MatProgressSpinnerModule,
   MatTabsModule,
 ];
 
@@ -25,4 +28,4 @@ const materials = [
   imports: [materials],
   exports: [materials],
 })
-export class MaterialModule {}
+export class MaterialModule { }
