@@ -21,10 +21,15 @@ const routes: Routes = [
     path: 'education',
     component: EducationComponent,
   },
+  {
+    path: 'contact-me',
+    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
